@@ -17,7 +17,8 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import WelcomeScreen from "./components/WelcomeScreen";
 import BlankPage from "./components/BlankPage";
 import CameraTest from "./components/CameraTest";
-import * as Font from 'expo-font';
+import * as Font from "expo-font";
+import UploadImage from "./components/UploadImage";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -30,8 +31,8 @@ export default function App() {
   useEffect(() => {
     const loadFonts = async () => {
       await Font.loadAsync({
-        'Poppins-Bold': require("./assets/fonts/Poppins-Bold.ttf"),
-        'Poppins-Regular': require("./assets/fonts/Poppins-Regular.ttf"),
+        "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+        "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
       });
       setFontLoaded(true);
     };
@@ -84,7 +85,7 @@ export default function App() {
             tabBarInactiveTintColor: "#B6A6A1",
           })}
         >
-          <Tab.Screen name="Login" component={Login} />
+          <Tab.Screen name="Upload Image" component={UploadImage} />
           <Tab.Screen name="Register" component={Register} />
           <Tab.Screen name="Forget Password" component={ForgetPassword} />
           <Tab.Screen name="Help" component={Help} />
@@ -92,7 +93,7 @@ export default function App() {
             name="Home"
             component={Home}
             options={{ tabBarButton: () => null }}
-          />          
+          />
           <Tab.Screen
             name="PetInfo"
             component={PetInfo}
