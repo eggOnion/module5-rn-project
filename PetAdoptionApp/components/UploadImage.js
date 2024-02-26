@@ -8,7 +8,7 @@ import { decode } from "base64-arraybuffer";
 
 // Initialize Supabase client
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
-const supabasePrivateKey = process.env.EXPO_PRIVATE_SUPABASE_KEY;
+const supabasePrivateKey = process.env.EXPO_PUBLIC_SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const UploadImage = () => {
